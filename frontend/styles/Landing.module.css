@@ -1,0 +1,44 @@
+/* Landing.module.css */
+
+/* Fullscreen Section */
+.landing-page {
+  background-image: url('https://via.placeholder.com/1600x900'); /* Add a background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-page h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.landing-page p {
+  font-size: 20px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-page .cta-button {
+  background-color: #00c853;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin-top: 30px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.landing-page .cta-button:hover {
+  background-color: #00796b;
+  transform: scale(1.1);
+}

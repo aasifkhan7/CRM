@@ -1,0 +1,58 @@
+/* Navbar.module.css */
+
+/* Navbar Container */
+.navbar {
+  background-color: #333; /* Dark background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding around the navbar */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space out the elements */
+  align-items: center; /* Vertically center the items */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+/* Logo Style */
+.navbar .logo {
+  font-size: 24px; /* Set a larger font size for the logo */
+  font-weight: bold; /* Make the logo text bold */
+  text-transform: uppercase; /* Capitalize the logo text */
+  letter-spacing: 1px; /* Space out the letters slightly */
+}
+
+/* Navigation Links Container */
+.navbar .navLinks {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Align links in a row */
+  gap: 20px; /* Space out the links */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Individual Navigation Links */
+.navbar .navLink {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underlines from links */
+  padding: 5px 10px; /* Add padding for clickable area */
+  font-size: 16px; /* Set font size */
+  transition: color 0.3s, transform 0.2s; /* Smooth transition for color and scale */
+}
+
+/* Hover and Active States for Links */
+.navbar .navLink:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #f0f0f0; /* Lighten color on hover */
+  transform: scale(1.05); /* Slight scale up effect */
+}
+
+/* Mobile Responsiveness: Stack items vertically on small screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .navbar .navLinks {
+    flex-direction: column; /* Stack navigation links vertically */
+    gap: 10px; /* Reduce the gap between links */
+  }
+}
