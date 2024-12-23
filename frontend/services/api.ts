@@ -4,87 +4,14 @@ import { Customer } from '../types/customer';
 const API = axios.create({ baseURL: "http://localhost:8080/api/" });
 
 export const getCustomers = async (): Promise<Customer[]> => {
-    const x = [
-        {
-            "id": "aasifid", "name": "Aasif Khan",
-            "email": "aasif.khan@example.com",
-            "phone": "+1234567890",
-            "company": "Tech Corp",
-            "notes": "Regular customer"
-        },
-        {
-            "id": "johnid", "name": "John Doe",
-            "email": "john.doe@example.com",
-            "phone": "+1987654321",
-            "company": "Doe Industries",
-            "notes": "New customer"
-        },
-        {
-            "id": "janesmithid", "name": "Jane Smith",
-            "email": "jane.smith@example.com",
-            "phone": "+1122334455",
-            "company": "Smith Solutions",
-            "notes": "VIP customer"
-        },
-        {
-            "id": "emilyjonesid", "name": "Emily Jones",
-            "email": "emily.jones@example.com",
-            "phone": "+1456789123",
-            "company": "Jones Enterprises",
-            "notes": "Pending order"
-        },
-        {
-            "id": "michaelbrownid", "name": "Michael Brown",
-            "email": "michael.brown@example.com",
-            "phone": "+1987345678",
-            "company": "Brown Industries",
-            "notes": "Interested in bulk order"
-        },
-        {
-            "id": "sarahmillerid", "name": "Sarah Miller",
-            "email": "sarah.miller@example.com",
-            "phone": "+1778392045",
-            "company": "Miller Solutions",
-            "notes": "Looking for discounts"
-        },
-        {
-            "id": "davidwilsonid", "name": "David Wilson",
-            "email": "david.wilson@example.com",
-            "phone": "+1230987654",
-            "company": "Wilson & Co.",
-            "notes": "Premium account holder"
-        },
-        {
-            "id": "laurawilliamsid", "name": "Laura Williams",
-            "email": "laura.williams@example.com",
-            "phone": "+1908765432",
-            "company": "Williams Enterprises",
-            "notes": "First-time purchase"
-        },
-        {
-            "id": "robertharrisid", "name": "Robert Harris",
-            "email": "robert.harris@example.com",
-            "phone": "+1245789302",
-            "company": "Harris Global",
-            "notes": "Feedback requested"
-        },
-        {
-            "id": "lindamartinid", "name": "Linda Martin",
-            "email": "linda.martin@example.com",
-            "phone": "+1678320912",
-            "company": "Martin Corp",
-            "notes": "Regular check-in"
-        }
-    ]
-    
     try {
       const response = await API.get("/customers");
-      return x
+      return response.data
     //   return response.data;
     } catch (error) {
       // Log the error for debugging
       console.error("Error fetching customers:", error);
-      return x
+      return []
     
       // Handle different error types gracefully
     //   if (error.response) {

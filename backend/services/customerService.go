@@ -4,6 +4,7 @@ import (
 	"backend/models"
 	"log"
 
+	"github.com/google/uuid"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -19,6 +20,7 @@ func GetCustomers() ([]models.Customer, error) {
 
 // CreateCustomer inserts a new customer by interacting with the repository
 func CreateCustomer(customer models.Customer) (*mongo.InsertOneResult, error) {
+	customer.ID = uuid.New().String()
 	result, err := CreateCustomerInDB(customer)
 	if err != nil {
 		log.Println("Error creating customer:", err)
